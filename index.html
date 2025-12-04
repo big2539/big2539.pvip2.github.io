@@ -77,52 +77,18 @@ const LIFF_ID = "2008464608-OBy1GM72";
 
 const flexMessage = {
   type: "flex",
-  altText: "🔥 โปรโมชั่นสุดพรีเมียม – คลิกเลย!",
+  altText: "🎰 โปรโมชั่นพิเศษ! รับสิทธิ์เลย",
   contents: {
     type: "bubble",
     size: "mega",
-
-    /* HERO ภาพหลัก + กรอบไฟวิ่ง */
     hero: {
-      type: "box",
-      layout: "vertical",
-      paddingAll: "0px",
-      contents: [
-        {
-          type: "image",
-          url: "https://img5.pic.in.th/file/secure-sv1/image---2025-12-04T150608.813.png",
-          size: "full",
-          aspectRatio: "1:1",
-          aspectMode: "cover"
-        },
-
-        /* ไฟวิ่ง (GIF แปะด้านบนแบบ absolute) */
-        {
-          type: "image",
-          url: "https://i.imgur.com/0qz5oVR.gif",  /* ไฟวิ่งทอง */
-          size: "full",
-          aspectMode: "cover",
-          position: "absolute",
-          offsetTop: "0px",
-          offsetStart: "0px",
-          offsetBottom: "0px",
-          offsetEnd: "0px"
-        },
-
-        /* มาสคอต */
-        {
-          type: "image",
-          url: "https://i.imgur.com/vtCeO4v.png",   /* มาสคอต PNG */
-          size: "md",
-          aspectMode: "fit",
-          position: "absolute",
-          offsetBottom: "6px",
-          offsetStart: "6px"
-        }
-      ]
+      type: "image",
+      url: "https://img5.pic.in.th/file/secure-sv1/image---2025-12-04T150608.813.md.png",
+      size: "full",
+      aspectRatio: "1:1",
+      aspectMode: "cover"
     },
 
-    /* BODY */
     body: {
       type: "box",
       layout: "vertical",
@@ -131,54 +97,63 @@ const flexMessage = {
       contents: [
         {
           type: "text",
-          text: "✨ โบนัสพิเศษสำหรับคุณ!",
+          text: "🎰 โบนัสพิเศษ! รีบรับก่อนหมด",
           weight: "bold",
           size: "lg",
-          color: "#facc15",
+          color: "#ffd833",
           align: "center"
         },
         {
           type: "text",
-          text: "คลิกเพื่อเข้าสู่เว็บไซต์กิจกรรม พร้อมโปรสุดคุ้ม!",
-          wrap: true,
+          text: "กดเข้าร่วมกิจกรรมเพื่อรับสิทธิ์สุดคุ้มตอนนี้!",
           size: "sm",
-          color: "#d9e8ff",
-          align: "center",
-          margin: "md"
+          color: "#c8d2ec",
+          wrap: true,
+          margin: "md",
+          align: "center"
+        },
+
+        /* ⭐ มาสคอต */
+        {
+          type: "image",
+          url: "https://img5.pic.in.th/file/secure-sv1/mascot-gold.png",
+          size: "lg",
+          aspectMode: "fit",
+          margin: "lg"
         }
       ]
     },
 
-    /* FOOTER ปุ่มลิงก์ */
     footer: {
       type: "box",
       layout: "vertical",
+      backgroundColor: "#0a1220",
       paddingAll: "16px",
-      backgroundColor: "#0d1526",
       contents: [
         {
-          type: "box",
-          layout: "vertical",
-          cornerRadius: "12px",
-          borderColor: "#ffd700",
-          borderWidth: "2px",
-          backgroundColor: "#ffe680",
-          paddingAll: "12px",
+          type: "button",
+          style: "primary",
+          color: "#ffdd55",
           action: {
             type: "uri",
+            label: "🚀 เข้าสู่เว็บไซต์กิจกรรม",
             uri: "https://porchas88.carrd.co"
-          },
-          contents: [
-            {
-              type: "text",
-              text: "🚀 เข้าสู่เว็บไซต์กิจกรรม",
-              weight: "bold",
-              align: "center",
-              color: "#3a2a00"
-            }
-          ]
+          }
         }
       ]
+    },
+
+    /* 🔥 กรอบไฟวิ่งรอบ Flex */
+    styles: {
+      hero: {
+        backgroundColor: "#000"
+      },
+      bubble: {
+        borderColor: "#ffd700",
+        borderWidth: "4px",
+        cornerRadius: "20px",
+        animated: true
+      }
     }
   }
 };
